@@ -1,27 +1,49 @@
-# PipesDeepDive
+# Angular Pipes Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+Este projeto foi desenvolvido com o objetivo de **praticar a criação e implementação de Pipes no Angular**.  
+Foram criados pipes personalizados para manipulação de listas e conversão de temperaturas.
 
-## Development server
+## 📌 Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **SortPipe**  
+  - Ordena listas de `string[]` ou `number[]`.  
+  - Aceita a direção de ordenação (`asc` ou `desc`).  
+  - Exemplo de uso:
+    ```html
+    <li *ngFor="let item of items | sort:'asc'">{{ item }}</li>
+    ```
 
-## Code scaffolding
+- **TemperaturePipe**  
+  - Converte temperaturas entre Celsius (°C) e Fahrenheit (°F).  
+  - Aceita valores do tipo `string` ou `number`.  
+  - Exemplo de uso:
+    ```html
+    <p>{{ 25 | temp:'cel':'fah' }}</p> <!-- saída: 77.00 °F -->
+    <p>{{ 86 | temp:'fah':'cel' }}</p> <!-- saída: 30.00 °C -->
+    ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Tecnologias Utilizadas
 
-## Build
+- [Angular](https://angular.io/)  
+- TypeScript  
+- HTML/CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ▶️ Executando o Projeto
 
-## Running unit tests
+```bash
+# Instalar dependências
+npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Rodar servidor de desenvolvimento
+ng serve
 
-## Running end-to-end tests
+# Acessar no navegador
+http://localhost:4200/
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 📚 Objetivo
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Este projeto é apenas para estudo e prática de Angular Pipes, sendo uma base simples para compreender:
+- Criação de pipes personalizados.
+- Uso de pipes em templates.
+- Aplicação prática em listas e dados numéricos.
